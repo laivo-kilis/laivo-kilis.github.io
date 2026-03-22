@@ -1,0 +1,30 @@
+---
+layout: default
+title: RIB Boat Rental Svencelė
+description: Fast and safe RIB boat rental on the Curonian Lagoon
+lang: en
+permalink: /en/
+---
+
+## About Us
+
+We offer RIB (Rigid Inflatable Boat) rentals in Svencelė, on the shore of the Curonian Lagoon. Our fast and reliable boats are a great choice for recreation, fishing, or water fun.
+
+## Pricing
+
+<div class="pricing-box" markdown="0">
+  <p><strong>RIB boat rental</strong></p>
+  <p class="price">300 EUR / 2 hours</p>
+  <p>Price includes the boat rental with all necessary equipment.</p>
+</div>
+
+## Location
+
+**Svencelė**, Klaipėda District Municipality, Lithuania — on the Curonian Lagoon.
+
+## Contact
+
+<div class="contact-section" markdown="0">
+  <p>For reservations and additional information, contact us by email:</p>
+  <p><strong>Email:</strong> <a href="mailto:nuoma@laivokilis.lt">nuoma@laivokilis.lt</a></p>
+</div>

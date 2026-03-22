@@ -1,0 +1,52 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.lang-switcher {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.lang-switcher a,
+.lang-switcher strong {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.lang-switcher a:hover {
+  text-decoration: underline;
+}
+
+.pricing-box {
+  background: #f0f7f4;
+  border-left: 4px solid #159957;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.pricing-box .price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #155799;
+}
+
+.contact-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fafbfc;
+  border-radius: 4px;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eff0f1;
+}
+
+h2:first-child {
+  border-top: none;
+  margin-top: 0;
+}
