@@ -31,6 +31,13 @@
 
       <footer class="site-footer">
         <span class="site-footer-credits">&copy; {{ 'now' | date: "%Y" }} RIB Nuoma Svencelė</span>
+        <span class="site-footer-links">
+          {% if page.lang == 'en' %}
+            <a href="{{ '/en/terms/' | relative_url }}">Terms and Conditions</a>
+          {% else %}
+            <a href="{{ '/salygos/' | relative_url }}">Taisyklės ir sąlygos</a>
+          {% endif %}
+        </span>
       </footer>
     </main>
   </body>

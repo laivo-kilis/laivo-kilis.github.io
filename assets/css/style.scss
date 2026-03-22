@@ -50,3 +50,44 @@ h2:first-child {
   border-top: none;
   margin-top: 0;
 }
+
+.site-footer-links {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.site-footer-links a {
+  color: #819198;
+  font-size: 0.9rem;
+}
+
+.contract hr {
+  margin: 2rem 0;
+}
+
+.contract table {
+  width: 100%;
+}
+
+@media print {
+  .page-header,
+  .lang-switcher,
+  .site-footer {
+    display: none;
+  }
+
+  .main-content {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contract {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .contract h1 {
+    text-align: center;
+  }
+}
