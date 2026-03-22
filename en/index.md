@@ -8,7 +8,7 @@ permalink: /en/
 
 ## About Us
 
-We offer RIB (Rigid Inflatable Boat) rentals in Svencelė, on the shore of the Curonian Lagoon. Our fast and reliable boats are a great choice for recreation, fishing, or water fun.
+We offer a RIB (Rigid Inflatable Boat) boat rental in Svencelė, on the shore of the Curonian Lagoon. It's a great choice for recreation, fishing, or water fun.
 
 ## Pricing
 

@@ -7,7 +7,7 @@ lang: lt
 
 ## Apie mus
 
-Siūlome RIB (Rigid Inflatable Boat) valčių nuomą Svencelėje, prie Kuršių marių. Mūsų greitos ir patikimos valtys — puikus pasirinkimas poilsiui, žvejybai ar pramogoms vandenyje.
+Siūlome RIB (Rigid Inflatable Boat) katerio nuomą Svencelėje, prie Kuršių marių. Tai puikus pasirinkimas poilsiui, žvejybai ar pramogoms vandenyje.
 
 ## Kaina
 
