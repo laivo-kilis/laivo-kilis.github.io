@@ -1,102 +1,251 @@
 ---
 ---
 
-// Autumn palette — darker, neutral, warm earth tones.
-// Override Cayman theme defaults before importing.
-$header-bg-color: #3a2e23;            // dark espresso brown
-$header-bg-color-secondary: #6b4423;  // warm walnut brown
-$header-heading-color: #f3ece1;       // warm off-white
-$section-headings-color: #8a4b2b;     // burnt sienna
-$body-link-color: #8c5a2b;            // muted ochre
-$blockquote-text-color: #7a6a58;      // muted taupe
+/* ============================================================
+   MB Laivo Kilis — modern, minimal stylesheet
+   Nautical-blue palette. No external theme.
+   ============================================================ */
 
-@import "{{ site.theme }}";
+:root {
+  --bg:        #ffffff;
+  --bg-alt:    #f5f7fa;
+  --text:      #111827;
+  --muted:     #6b7280;
+  --accent:    #1e5b8c;
+  --accent-dk: #16456b;
+  --border:    #e5e7eb;
+
+  --wrap:      44rem;   /* ~704px content column */
+  --radius:    10px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* ---- Links ---- */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { color: var(--accent-dk); text-decoration: underline; }
+
+/* ---- Skip link ---- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 var(--radius) 0;
+  z-index: 10;
+}
+.skip-link:focus { left: 0; }
+
+/* ---- Header ---- */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+.brand {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.brand:hover { color: var(--accent); text-decoration: none; }
 
 .lang-switcher {
-  text-align: right;
-  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
 }
+.lang-switcher span[aria-current] { color: var(--text); }
+.lang-switcher a { color: var(--muted); }
+.lang-switcher a:hover { color: var(--accent); text-decoration: none; }
 
-.lang-switcher a,
-.lang-switcher strong {
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-  font-size: 0.9rem;
+/* ---- Hero ---- */
+.page-hero {
+  padding: 4rem 0 2.5rem;
 }
-
-.lang-switcher a:hover {
-  text-decoration: underline;
-}
-
-.pricing-box {
-  background: #f5efe6;
-  border-left: 4px solid #8a4b2b;
-  padding: 1.2rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 0 4px 4px 0;
-}
-
-.pricing-box .price {
-  font-size: 1.8rem;
+.page-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 2.9rem);
+  line-height: 1.1;
   font-weight: 700;
-  color: #7a3b1f;
+  letter-spacing: -0.025em;
+}
+.page-hero .lead {
+  margin: 1rem 0 0;
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 36rem;
 }
 
-.contact-section {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: #f7f3ec;
-  border-radius: 4px;
+/* ---- Content ---- */
+.content { padding-bottom: 4rem; }
+
+.content h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 2.75rem 0 0.75rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--border);
+}
+.content h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+
+.content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem;
 }
 
-h2 {
-  margin-top: 2.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #e6ddd0;
-}
+.content p { margin: 0 0 1.1rem; }
 
-h2:first-child {
-  border-top: none;
-  margin-top: 0;
-}
+.content ul,
+.content ol { margin: 0 0 1.1rem; padding-left: 1.4rem; }
+.content li { margin-bottom: 0.4rem; }
+.content li::marker { color: var(--accent); }
 
-.site-footer-links {
-  display: block;
-  margin-top: 0.5rem;
-}
+.content strong { font-weight: 600; }
 
-.site-footer-links a {
-  color: #8c7a64;
-  font-size: 0.9rem;
-}
-
-.contract hr {
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
   margin: 2rem 0;
 }
 
-.contract table {
-  width: 100%;
+/* ---- Pricing card ---- */
+.pricing-box {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.75rem;
+  margin: 1.75rem 0;
+  background: var(--bg-alt);
+}
+.pricing-box p { margin: 0; }
+.pricing-box p:first-child {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.pricing-box .price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  margin: 0.3rem 0 0.5rem;
 }
 
+/* ---- Contact card ---- */
+.contact-section {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin: 1.75rem 0;
+  background: var(--bg-alt);
+}
+.contact-section p { margin: 0 0 0.5rem; }
+.contact-section p:last-child { margin-bottom: 0; }
+
+/* ---- Tables ---- */
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+.content th,
+.content td {
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.875rem;
+  padding: 2rem 0;
+}
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.footer-links a { color: var(--muted); }
+.footer-links a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---- Contract page ---- */
+.contract h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+.contract h2 {
+  font-size: 1.15rem;
+  border-top: none;
+  padding-top: 0;
+  margin-top: 2rem;
+}
+
+/* ============================================================
+   Print — clean A4 contract
+   ============================================================ */
 @media print {
-  .page-header,
+  .site-header,
+  .site-footer,
+  .skip-link,
   .lang-switcher,
-  .site-footer {
-    display: none;
-  }
+  .page-hero { display: none; }
 
-  .main-content {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
+  body { font-size: 11pt; line-height: 1.5; color: #000; }
+  .wrap { max-width: 100%; padding: 0; }
+  .content { padding-bottom: 0; }
 
-  .contract {
-    font-size: 11pt;
-    line-height: 1.5;
-  }
+  .contract h1 { text-align: center; }
+  .content h2 { border-top: none; padding-top: 0; }
 
-  .contract h1 {
-    text-align: center;
-  }
+  a { color: #000; text-decoration: none; }
 }

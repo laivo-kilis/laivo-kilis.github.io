@@ -1,4 +1,7 @@
-theme: jekyll-theme-cayman
 title: MB Laivo Kilis
+description: Greita ir saugi RIB valčių nuoma Kuršių mariose
 lang: lt
 show_downloads: false
+
+plugins:
+  - jekyll-sitemap

@@ -5,6 +5,7 @@ description: MB Laivo Kilis katerio nuomos sutartis
 lang: lt
 permalink: /sutartis/
 sitemap: false
+hide_hero: true
 ---
 
 <div class="contract" markdown="1">
